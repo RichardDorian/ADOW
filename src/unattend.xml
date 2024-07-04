@@ -9,6 +9,7 @@
 			<UserData>
 				<ProductKey>
 					<Key>00000-00000-00000-00000-00000</Key>
+					<WillShowUI>Always</WillShowUI>
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
 			</UserData>

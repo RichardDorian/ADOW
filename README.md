@@ -17,3 +17,5 @@ A Decently Optimized Windows
 - Disables telemetry & data collection
 - Removes most bloatware (see list [here](docs/bloatware.md))
 - Disables last access timestamp
+- Disables mouse acceleration
+- Enables dark mode by default
