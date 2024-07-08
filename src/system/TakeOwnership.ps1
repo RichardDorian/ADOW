@@ -1,5 +1,6 @@
-# Author: Couleur
-# https://github.com/couleur-tweak-tips/TweakList
+# Question: Add "Take Ownership" to context menu?
+# Recommended: No
+# Core: Yes
 
 "*", "Directory" | ForEach-Object {
   New-Item -Path "Registry::HKEY_CLASSES_ROOT\$_\shell\runas"

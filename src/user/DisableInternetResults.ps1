@@ -1,2 +1,6 @@
+# Question: Remove internet search results from Start menu?
+# Recommended: Yes
+# Core: Yes
+
 New-Item -path "Registry::HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" -Force
 Set-ItemProperty -LiteralPath "Registry::HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" -Name "DisableSearchBoxSuggestions" -Value 1

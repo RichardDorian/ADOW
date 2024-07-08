@@ -1,3 +1,7 @@
+# Question: Remove bloatware?
+# Recommended: Yes
+# Core: Yes
+
 $packages = @(
   "Microsoft.Microsoft3DViewer"
   "Microsoft.BingSearch"
