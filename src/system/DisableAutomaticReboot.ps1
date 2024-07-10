@@ -1,7 +1,3 @@
-# Question: Disable automatic reboots after system updates?
-# Recommended: Yes
-# Core: Yes
-
 Set-ItemProperty -LiteralPath "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "SetActiveHours" -Value 0
 
 New-Item -Path "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Force
