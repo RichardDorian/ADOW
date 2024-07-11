@@ -40,7 +40,7 @@ for file_path in windowsPE:
   
   synchronous_command(root, orders["windowsPE"], f'cmd.exe /c "start /MIN x:\\{file_path}"')
   orders["windowsPE"] += 1
-synchronous_command(root, orders["windowsPE"], 'cmd.exe')
+# synchronous_command(root, orders["windowsPE"], 'cmd.exe')
 
 files = ET.SubElement(xml.getroot(), "Files")
 ET.SubElement(files, "ExtractScript").text = "param( [xml] $Document ); $scriptsDir = 'C:\\Windows\\Setup\\Scripts\\'; foreach( $file in $Document.unattend.Files.File ) { $path = [System.Environment]::ExpandEnvironmentVariables( $file.GetAttribute( 'path' ) ); if( $path.StartsWith( $scriptsDir ) ) { mkdir -Path $scriptsDir -ErrorAction 'SilentlyContinue'; } $encoding = switch( [System.IO.Path]::GetExtension( $path ) ) { { $_ -in '.ps1', '.xml' } { [System.Text.Encoding]::UTF8; } { $_ -in '.reg', '.vbs', '.js' } { [System.Text.UnicodeEncoding]::new( $false, $true ); } default { [System.Text.Encoding]::Default; } }; [System.IO.File]::WriteAllBytes( $path, ( $encoding.GetPreamble() + $encoding.GetBytes( $file.InnerText.Trim() ) ) ); }"
@@ -51,7 +51,7 @@ def add_file(path, content):
 
 specialize = listdir("src/specialize")
 root = xml.find(".//{urn:schemas-microsoft-com:unattend}settings[@pass='specialize']/{urn:schemas-microsoft-com:unattend}component[@name='Microsoft-Windows-Deployment']/{urn:schemas-microsoft-com:unattend}RunSynchronous")
-synchronous_command(root, orders["specialize"], 'powershell.exe -NoProfile -Command "$xml = [xml]::new(); $xml.Load(\'C:\\Windows\\Panther\\unattend.xml\'); $sb = [scriptblock]::Create( $xml.unattend.Extensions.ExtractScript ); Invoke-Command -ScriptBlock $sb -ArgumentList $xml;"')
+synchronous_command(root, orders["specialize"], 'powershell.exe -NoProfile -Command "$xml = [xml]::new(); $xml.Load(\'C:\\Windows\\Panther\\unattend.xml\'); $sb = [scriptblock]::Create( $xml.unattend.Files.ExtractScript ); Invoke-Command -ScriptBlock $sb -ArgumentList $xml;"')
 orders["specialize"] += 1
 for file_path in specialize:
   with open("src/specialize/" + file_path) as f:
@@ -67,6 +67,6 @@ for file_path in specialize:
   synchronous_command(root, orders["specialize"], command)
   orders["specialize"] += 1
   
-synchronous_command(root, orders["specialize"], 'cmd.exe')
+# synchronous_command(root, orders["specialize"], 'cmd.exe')
 
 xml.write(output, encoding="utf-8")

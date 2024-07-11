@@ -1,3 +1,6 @@
+# Author: Couleur
+# https://github.com/couleur-tweak-tips/TweakList/blob/master/modules/Add-ContextMenu.ps1
+
 "*", "Directory" | ForEach-Object {
   New-Item -Path "Registry::HKEY_CLASSES_ROOT\$_\shell\runas"
   Set-ItemProperty -LiteralPath "Registry::HKEY_CLASSES_ROOT\$_\shell\runas" -Name "(Default)" -Value "Take Ownership"
