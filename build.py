@@ -1,8 +1,11 @@
 import xml.etree.ElementTree as ET
-from os import listdir
+from os import listdir, makedirs, path
 
 input = "src/autounattend.xml"
-output = "build/autounattend.xml"
+output = "build"
+
+if not path.exists(output):
+  makedirs(output)
 
 ET.register_namespace("", "urn:schemas-microsoft-com:unattend")
 ET.register_namespace("wcm", "http://schemas.microsoft.com/WMIConfig/2002/State")
@@ -69,4 +72,4 @@ for file_path in specialize:
   
 # synchronous_command(root, orders["specialize"], 'cmd.exe')
 
-xml.write(output, encoding="utf-8")
+xml.write(output + "/autounattend.xml", encoding="utf-8")
