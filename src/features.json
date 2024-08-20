@@ -1,0 +1,182 @@
+[
+  {
+    "name": "AllowNoInternetSetup",
+    "description": "Allows you to setup Windows 11 without an internet connection",
+    "scripts": [
+      { "path": "specialize/AllowNoInternetSetup.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "AllowPowerShellScriptExecution",
+    "description": "Allows PowerShell script execution on the machine (sets the execution policy to RemoteSigned)",
+    "scripts": [
+      {
+        "path": "specialize/AllowPowerShellScriptExecution.ps1",
+        "stage": "specialize"
+      }
+    ]
+  },
+  {
+    "name": "CleanStartMenu",
+    "description": "Removes everything from the Start Menu",
+    "scripts": [
+      { "path": "specialize/CleanStartMenu.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableAdvertisingInfo",
+    "description": "Disables advertising info",
+    "scripts": [
+      { "path": "specialize/DisableAdvertisingInfo.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableAutomaticReboot",
+    "description": "Disables automatic reboots after updates",
+    "scripts": [
+      { "path": "specialize/DisableAutomaticReboot.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableCopilot",
+    "description": "Disables system integration of Copilot",
+    "scripts": [
+      { "path": "specialize/DisableCopilot.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableDesktopWidgets",
+    "description": "Disables desktop widgets in the taskbar",
+    "scripts": [
+      { "path": "specialize/DisableDesktopWidgets.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableFastStartup",
+    "description": "Disables fast startup",
+    "scripts": [
+      { "path": "specialize/DisableFastStartup.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableInternetResults",
+    "description": "Disables internet results in the Start Menu which makes it a lot faster and more private",
+    "scripts": [
+      { "path": "specialize/DisableInternetResults.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableLastAccess",
+    "description": "Disables last access timestamp updates (for NTFS) which can improve performance",
+    "scripts": [
+      { "path": "specialize/DisableLastAccess.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableMouseAcceleration",
+    "description": "Disables mouse acceleration",
+    "scripts": [
+      {
+        "path": "specialize/DisableMouseAcceleration.cmd",
+        "stage": "specialize"
+      }
+    ]
+  },
+  {
+    "name": "DisableOnlineTips",
+    "description": "Disable online tips",
+    "scripts": [
+      { "path": "specialize/DisableOnlineTips.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "DisableStoreRecommendations",
+    "description": "Disables Windows Store recommendations",
+    "scripts": [
+      {
+        "path": "specialize/DisableStoreRecommendations.cmd",
+        "stage": "specialize"
+      }
+    ]
+  },
+  {
+    "name": "DisableWindowsDefender",
+    "description": "Disables Windows Defender",
+    "scripts": [
+      { "path": "windowsPE/DisableWindowsDefender.cmd", "stage": "windowsPE" },
+      { "path": "specialize/DisableWindowsDefender.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "BypassWin11Requirements",
+    "description": "Bypasses Windows 11 requirements (TPM, Secure Boot, CPU, Ram, Storage & Disk)",
+    "scripts": [
+      { "path": "windowsPE/BypassWin11Requirements.cmd", "stage": "windowsPE" }
+    ]
+  },
+  {
+    "name": "EnableClipboardHistory",
+    "description": "Enables clipboard history",
+    "scripts": [
+      { "path": "specialize/EnableClipboardHistory.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "EnableLongPaths",
+    "description": "Enable long paths (up to 32,767 characters)",
+    "scripts": [
+      { "path": "specialize/EnableLongPaths.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "RemoveBloatware",
+    "description": "Removes bloatware that comes with Windows 11",
+    "scripts": [
+      { "path": "specialize/RemoveBloatware.ps1", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "RemoveBluetoothIcon",
+    "description": "Removes the Bluetooth icon from the system tray (still accessible from tile menu)",
+    "scripts": [
+      { "path": "specialize/RemoveBluetoothIcon.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "RemoveMRT",
+    "description": "Removes the Malicious Software Removal Tool",
+    "scripts": [{ "path": "specialize/RemoveMRT.cmd", "stage": "specialize" }]
+  },
+  {
+    "name": "RemoveOneDrive",
+    "description": "Prevents OneDrive from being installed",
+    "scripts": [
+      { "path": "specialize/RemoveOneDrive.cmd", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "TakeOwnership",
+    "description": "Add a context menu item to take ownership of files and folders",
+    "scripts": [
+      { "path": "specialize/TakeOwnership.ps1", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "UltimatePerformance",
+    "description": "Adds and enables the Ultimate Performance power plan",
+    "scripts": [
+      { "path": "specialize/UltimatePerformance", "stage": "specialize" }
+    ]
+  },
+  {
+    "name": "UninstallEdge",
+    "description": "Uninstall Microsoft Edge (browser only). Warning: you will not have an internet browser after this",
+    "scripts": [
+      { "path": "specialize/UninstallEdge.cmd", "stage": "specialize" },
+      {
+        "path": "specialize/RemoveEdgeDesktopShortcut.cmd",
+        "stage": "specialize"
+      }
+    ]
+  }
+]

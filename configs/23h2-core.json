@@ -1,0 +1,30 @@
+{
+  "name": "windows11-23h2-core",
+  "description": "Minimal Windows 11 build (made for and tested on 23H2). Suitable for experienced users.",
+  "features": [
+    "AllowNoInternetSetup",
+    "AllowPowerShellScriptExecution",
+    "CleanStartMenu",
+    "DisableAdvertisingInfo",
+    "DisableAutomaticReboot",
+    "DisableCopilot",
+    "DisableDesktopWidgets",
+    "DisableFastStartup",
+    "DisableInternetResults",
+    "DisableLastAccess",
+    "DisableMouseAcceleration",
+    "DisableOnlineTips",
+    "DisableStoreRecommendations",
+    "DisableWindowsDefender",
+    "BypassWin11Requirements",
+    "EnableClipboardHistory",
+    "EnableLongPaths",
+    "RemoveBloatware",
+    "RemoveBluetoothIcon",
+    "RemoveMRT",
+    "RemoveOneDrive",
+    "TakeOwnership",
+    "UltimatePerformance",
+    "UninstallEdge"
+  ]
+}

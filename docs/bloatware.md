@@ -1,0 +1,45 @@
+# Bloatware
+
+Here's the list of the bloatware apps removed by ADOW:
+
+- 3D Viewer
+- Camera
+- Copilot
+- Family
+- Internet Explorer
+- Math Input Panel
+- Notepad (classic)
+- OneDrive
+- Outlook for Windows
+- People
+- PowerShell ISE
+- Sticky Notes
+- To Do
+- Windows Media Player (classic)
+- WordPad
+- Bing Search
+- Clipchamp
+- Cortana
+- Feedback Hub
+- Mail & Calendar
+- Movies & TV
+- OneNote
+- Quick Assist
+- Solitaire Collection
+- Teams
+- Voice Recorder
+- Windows Media Player (modern)
+- Xbox Apps
+- Clock
+- Dev Home
+- Get Help
+- Maps
+- News
+- Office 365
+- Paint 3D
+- Power Automate
+- Skype
+- Steps Recorder
+- Tips
+- Weather
+- Your Phone
