@@ -10,4 +10,4 @@ jobs:
         with:
           python-version: '3.12.4'
       - name: Run build script
-        run: python build.py
+        run: python scripts/build.py
